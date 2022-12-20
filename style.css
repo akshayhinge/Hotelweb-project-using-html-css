@@ -1,0 +1,393 @@
+body{
+    margin: 0px;
+   
+}
+nav{
+    height: 100vh;
+}
+#navbar{
+    position: fixed;
+    z-index: 100;
+    display: flex;   
+    height: 65px;
+    }
+#logo:hover{
+    cursor: pointer;
+}
+#logo{
+    text-align: center;
+    width: 10rem;
+    padding: 15px;
+}
+#navbar #logo p{
+    margin: 0px;
+    color: white;
+    font-size: 17px;
+}
+#navbar #logo  hr{
+    margin: 0px;
+    
+}
+#navbar ul{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0px;
+    list-style: none;
+    width: 100vw;
+    height: 70px;
+}
+#navbar li  p{
+    margin: 0px;
+    font-size: 14px;
+    color: #ffebeb;
+    text-decoration: none;
+    text-align: center;
+    margin-right: 0px;
+}#navbar li a{margin: 0px;}
+#navbar li a{
+    padding: 10px;
+    font-size: 25px;
+    color: white;
+    text-decoration: none;  
+}
+#navbar li a:hover{
+    color: rgb(199 199 199);
+    text-decoration: underline;
+}
+/* nav::before {
+    content: "";
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    filter: brightness(0.5);
+    animation-name: slide;
+    animation-timing-function: ease-in-out;
+    animation-duration: 20s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    
+}
+@keyframes slide {
+    0%,100%{
+        background-image: url(./img/1.jpg);
+    }
+    35%{
+        background-image: url(./img/2.jpg);
+    }
+    70%{
+        background-image: url(./img/bg3.jpg);
+    }
+} */
+#slide1 nav::before {
+    content: "";
+    background-image: url(./img/1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    filter: brightness(0.5);
+    animation-name: slide;
+    animation-timing-function: ease-in-out;
+    animation-duration: 20s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    
+}
+#slide2 nav::before {
+    content: "";
+    background-image: url(./img/2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    filter: brightness(0.5);
+    animation-name: slide;
+    animation-timing-function: ease-in-out;
+    animation-duration: 20s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    
+}
+#slide3 nav::before {
+    content: "";
+    background-image: url(./img/bg3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    filter: brightness(0.5);
+    animation-name: slide;
+    animation-timing-function: ease-in-out;
+    animation-duration: 20s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    
+}
+#background{
+    text-align: center;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+}
+#background h4{   
+    font-size: 60px;
+    font-weight: bolder;
+    margin-bottom: 0px;}
+#background p{
+    font-size: 20px;
+    padding: 0px 100px;
+}
+#about-sec{
+    display: grid;
+    grid-template-areas: 
+    'about about about'
+    'tag-owner tag-owner tag-owner '
+    'owner owner owner'
+    'horizantal-line horizantal-line horizantal-line'
+    'tag-staff tag-staff tag-staff'
+   'chef waiter1  waiter2';
+    margin: auto;
+    width: 100%;
+}
+#about{
+    grid-area: about;
+    /* border-b: 2px solid; */
+    text-align: center;
+    width: 100%;
+}
+#about p{
+    color: black;
+    font-size: 20px;
+    text-align: center;
+    padding: 13px;
+    margin: 0px;
+}
+#about h1{
+    top: 56px;
+    font-size: 50px;
+    color: rgb(0, 0, 0);
+    margin-bottom: 0px;
+}
+#owner{
+    grid-area: owner;
+    margin: auto;
+    width: 25rem;
+    height: auto;
+    position: relative;
+    text-align: center;
+}
+#owner img{
+    width: 25rem;
+    height: auto;
+    display: block;
+}
+#overlay-btn{
+    display: flex;
+    justify-content: center;
+}
+#overlay-btn img{
+    width: 34px;
+    height: auto;
+}
+.staff #overlay-btn img{
+    width: 34px;
+    height: auto;
+}
+#overlay-btn button:hover{
+    cursor: pointer;
+    background-color: gray;
+}
+#owner:hover .overlay-owner{
+    width: 100%;
+    bottom:  0;
+    height: 100%;
+}
+.overlay-owner{
+    top: 0;
+bottom: 100%;
+position:absolute;
+background-color: rgb(0, 0, 0);
+width: 100%;
+height: 0;
+transition: 0.5s ease;
+overflow: hidden;
+opacity: 0.7;
+
+}
+.overlay-owner p{
+   color: white;
+    font-size: 1.5rem;
+}
+.overlay-owner h1{
+    color: white;
+    font-size: 3rem;
+    margin-top: 123px;
+    margin-bottom: 0px;
+}
+#tag-owner{grid-area: tag-owner;
+    margin: auto;
+    font-size: 2.5rem;
+}
+#tag-staff{grid-area: tag-staff;
+    margin: auto;
+    font-size: 2.5rem;
+}
+#about-sec hr{
+ grid-area: horizantal-line;
+}
+#chef{
+    grid-area: chef;
+}
+#waiter1{
+grid-area: waiter1;
+}
+#waiter2{
+grid-area: waiter2;
+}
+#chef img{
+    width: 20rem;
+    height: auto;
+    display: block;
+}
+#waiter1 img{
+    width: 20rem;
+    height: auto;
+    display: block;
+}
+#waiter2 img{
+    width: 20rem;
+    height: auto;
+    display: block;
+}
+#chef:hover .overlay{
+   width: 100%;
+   top: 0;
+   height: 100%;
+}
+#waiter1:hover .overlay{
+   width: 100%;
+   top: 0;
+   height: 100%;
+}
+#waiter2:hover .overlay{
+   width: 100%;
+   top: 0;
+   height: 100%;
+}
+.overlay{
+top: 100%;
+bottom: 0;
+position:absolute;
+background-color: rgb(0, 0, 0);
+width: 100%;
+height: 0;
+transition: 0.5s ease;
+overflow: hidden;
+opacity: 0.7;
+}
+.overlay p{
+    color: white;
+   font-size: 1.5rem;
+}
+.overlay h1{
+  color: white;
+  font-size: 3rem;
+  margin-top: 123px;
+  margin-bottom: 0px;
+}
+.staff{
+    position: relative;
+border: 1px solid;
+text-align: center;
+width: 20rem;
+height: auto;
+filter: contrast();
+}
+.staff p{    
+    margin: 7px;
+}
+#celebration-hall{
+    display: grid;
+    grid-template-areas: 
+    'img  h1'
+   'img   list';
+    margin: auto;
+    width: 100%;
+
+}
+#celebration-hall img{
+    width: 32pc;
+    height: auto;
+    grid-area: img;
+    margin: 11px 40px;
+    border-radius: 23px;
+}
+#celebration-hall h1{
+    font-size: 3rem;
+    grid-area: h1;
+    margin-bottom: 1px;
+    margin-bottom: -60px;
+    margin-top: 13px;
+}
+#celebration-hall ul{
+    grid-area: list;
+    font-size: 1.5rem;
+}
+#facilities .title{
+    font-size: 3.5rem;
+    text-decoration: underline;
+    padding: 0px 45px;
+}
+
+#reservation-sec #reservation #form{
+    display: flex;  
+    align-items: center;
+    justify-content:center;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+} 
+#reservation-sec #reservation #form #box1{
+    display: flex;  
+    align-items: flex-end;
+    justify-content:center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+#reservation-sec #reservation #form #box2{
+    display: flex;  
+    align-items: flex-start;
+    justify-content:center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+#reservation-sec #reservation #form .id{
+    margin: 1.5rem;
+    width: 20rem;
+    height: 2.5rem;
+}
+#reservation-sec #reservation #Head{
+    font-size: 2.5rem;
+    padding: 0px 50px;
+    text-decoration: underline;
+}
